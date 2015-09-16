@@ -1,0 +1,12 @@
+User-agent: *
+Crawl-delay: 5
+Sitemap: http://parikmaher-na-dom.hol.es/sitemap.xml
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /scripts/
+Disallow: /engine/
+Disallow: form.html
+Disallow: payment-form.html
+Disallow: payment-success.html
+Disallow: 404.html

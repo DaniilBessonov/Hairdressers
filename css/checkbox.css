@@ -1,0 +1,99 @@
+.my-checkbox {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0 3px 0 0;
+}
+
+.my-checkbox + label {
+    cursor: pointer;
+}
+
+.my-checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.my-checkbox:not(checked) + label {
+    position: relative;
+    /*padding: 0 0 0 35px;*/
+}
+
+.my-checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #CDD1DA;
+    border-radius: 20%;
+    background: #FFF;
+}
+
+.my-radio.my-checkbox:not(checked) + label:before {
+    border-radius: 50%;
+}
+
+.my-checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 20%;
+    background: #64246d;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: all .2s;
+}
+
+.my-radio.my-checkbox:not(checked) + label:after {
+    border-radius: 50%;
+}
+
+.my-checkbox:checked + label:after {
+    opacity: 1;
+}
+
+.my-checkbox:focus + label:before {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .2);
+}
+
+input[type='reset'] {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #CDD1DA;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input[type='reset']:active {
+    background: #BDC0CC;
+}
+
+input[type='reset']:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .2);
+}
+
+.checkbox > label > span {
+    margin-left: 30px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+div.checkbox label {
+    padding-left: 0;
+}
+
+.disabled-checkbox {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.disabled-checkbox > label {
+    cursor: not-allowed;
+}
