@@ -22,6 +22,7 @@ Engine.prototype.crossDomainCall = function (url) {
 };
 Engine.prototype.city_id = 0;
 
+
 function Booking(city_id) {
     this.city_id = city_id;
 }

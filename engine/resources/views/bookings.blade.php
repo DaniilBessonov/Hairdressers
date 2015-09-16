@@ -20,8 +20,11 @@
     <![endif]-->
 
     <style type="text/css">
-        body {
-            margin: 20px;
+        #body-wrapper{
+            margin: 0 20px;
+        }
+        .table-responsive{
+            margin-bottom: 20px;
         }
 
         #alert-container-wrap {
@@ -71,6 +74,7 @@
     </style>
 </head>
 <body>
+<div id="body-wrapper">
 <div id="alert-container-wrap">
     <div id="alert-container"></div>
 </div>
@@ -86,7 +90,7 @@
         <div class="dropdown">
             <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="true">
-                Все
+                Только активные
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -109,6 +113,9 @@
     <a class="btn btn-default" href="hairdressers" role="button">База парикмахеров</a>
     <a class="btn btn-default" href="home" role="button">В Личный кабинет</a>
 </p>
+</div>
+
+<div class="table-responsive">
 <table class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
@@ -120,7 +127,7 @@
         <th>Услуга</th>
         <th>Дата получения заказа</th>
         <th>Дата выполнения заказа</th>
-        <th>Дата получения оплаты</th>
+        <th class="hidden-xs hidden-sm">Дата получения оплаты</th>
         <th>Полная цена</th>
         <th>Цена работы</th>
         <th>Вознаграждение</th>
@@ -190,6 +197,7 @@
     </tr>-->
     </tbody>
 </table>
+</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -203,7 +211,7 @@
 <script>
 
     var bookingEngine = new Booking(95);
-    bookingEngine.allByCity(bookingCallback);
+    bookingEngine.onlyActiveByCity(bookingCallback);
 
     function bookingCallback(bookings) {
         var target = $('tbody');
@@ -245,7 +253,7 @@
     }
 
     function getBookingHtmlTemplate() {
-        return '<tr><td>obj.id</td><td><div class="btn-group"><button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">obj.status <span class="caret"></span></button><ul class="dropdown-menu"><li><a href="#" data-type="status" onclick="save(this)">Новый</a></li><li><a href="#" data-type="status" onclick="save(this)">Договорились</a></li><li><a href="#" data-type="status" onclick="save(this)">Выполнен</a></li><li><a href="#" data-type="status" onclick="save(this)">Оплачен</a></li><li><a href="#" data-type="status" onclick="save(this)">Продолбан</a></li><li><a href="#" data-type="status" onclick="save(this)">Пустой</a></li><li><a href="#" data-type="status" onclick="save(this)">Дубликат</a></li></ul></div></td><td>obj.client_name</td><td>obj.client_phone</td><td>obj.name obj.surname ID#obj.hairdresser_id</td><td>obj.service</td><td>obj.booking_date</td><td class="date-container"><div class="date-btn-container"><div class="btn-group"><button type="button" class="btn btn-default" data-type="markMade" onclick="save(this,new Date().trueFormat())">Сегодня</button><button type="button" class="btn btn-default dropdown-toggl btn-data-picker" data-type="markMade"data-provide="datepicker"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button></div></div><div class="date-text-container">obj.execution_date</div></td><td class="date-container"><div class="date-btn-container"><div class="btn-group"><button type="button" class="btn btn-default" data-type="markPaid" onclick="save(this,new Date().trueFormat())">Сегодня</button><button type="button" class="btn btn-default dropdown-toggl btn-data-picker" data-type="markPaid"data-provide="datepicker"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button></div></div><div class="date-text-container">obj.payment_date</div></td><td contenteditable="true" data-type="full_price" onblur="save(this)">obj.full_price</td><td contenteditable="true" data-type="work_price" onblur="save(this)">obj.work_price</td><td contenteditable="true" data-type="reward" onblur="save(this)">obj.reward</td><td contenteditable="true" data-type="comment" onblur="save(this)">obj.comment</td></tr>';
+        return '<tr><td>obj.id</td><td><div class="btn-group"><button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">obj.status <span class="caret"></span></button><ul class="dropdown-menu"><li><a href="#" data-type="status" onclick="save(this)">Новый</a></li><li><a href="#" data-type="status" onclick="save(this)">Договорились</a></li><li><a href="#" data-type="status" onclick="save(this)">Выполнен</a></li><li><a href="#" data-type="status" onclick="save(this)">Оплачен</a></li><li><a href="#" data-type="status" onclick="save(this)">Продолбан</a></li><li><a href="#" data-type="status" onclick="save(this)">Пустой</a></li><li><a href="#" data-type="status" onclick="save(this)">Дубликат</a></li></ul></div></td><td>obj.client_name</td><td>obj.client_phone</td><td>obj.name obj.surname ID#obj.hairdresser_id</td><td>obj.service</td><td>obj.booking_date</td><td class="date-container"><div class="date-btn-container"><div class="btn-group"><button type="button" class="btn btn-default" data-type="markMade" onclick="save(this,new Date().trueFormat())">Сегодня</button><button type="button" class="btn btn-default dropdown-toggl btn-data-picker" data-type="markMade"data-provide="datepicker"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button></div></div><div class="date-text-container">obj.execution_date</div></td><td class="date-container hidden-xs hidden-sm"><div class="date-btn-container"><div class="btn-group"><button type="button" class="btn btn-default" data-type="markPaid" onclick="save(this,new Date().trueFormat())">Сегодня</button><button type="button" class="btn btn-default dropdown-toggl btn-data-picker" data-type="markPaid"data-provide="datepicker"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button></div></div><div class="date-text-container">obj.payment_date</div></td><td contenteditable="true" data-type="full_price" onblur="save(this)">obj.full_price</td><td contenteditable="true" data-type="work_price" onblur="save(this)">obj.work_price</td><td contenteditable="true" data-type="reward" onblur="save(this)">obj.reward</td><td contenteditable="true" data-type="comment" onblur="save(this)">obj.comment</td></tr>';
     }
 
     function getAlertHtmlTemplate() {

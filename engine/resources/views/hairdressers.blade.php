@@ -19,8 +19,11 @@
     <![endif]-->
 
     <style type="text/css">
-        body {
-            margin: 20px;
+        #body-wrapper{
+            margin: 0 20px;
+        }
+        .table-responsive{
+            margin-bottom: 20px;
         }
 
         #alert-container-wrap {
@@ -94,9 +97,14 @@
         .selectable:hover{
             transform: rotate(2deg);
         }
+        .btn-default{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
+<div id="body-wrapper">
 <div id="alert-container-wrap">
     <div id="alert-container"></div>
 </div>
@@ -135,6 +143,8 @@
     <a class="btn btn-default" href="test-mode" role="button" target="_blank">Demo-страница</a>
     <button type="button" class="btn btn-primary" onclick="newHairdresser()">Добавить нового парикмахера</button>
 </p>
+</div>
+<div class="table-responsive">
 <table id="main-table" class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
@@ -169,7 +179,7 @@
      </tr>-->
     </tbody>
 </table>
-
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="editHairdresserModal" tabindex="-1" role="dialog"
