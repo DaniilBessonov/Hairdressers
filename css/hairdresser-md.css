@@ -1,4 +1,4 @@
-.my-major-link {
+.my-major-link,.my-major-link:visited, .my-major-link:active, .my-major-link:focus{
     color: #FFFFFF;
     text-decoration: none;
     border-bottom: 1px dashed #ffffff;
@@ -11,7 +11,7 @@
     cursor: pointer;
 }
 
-.my-minor-link {
+.my-minor-link, .my-minor-link:visited, .my-minor-link:active, .my-minor-link:focus {
     color: #64246d;
     text-decoration: none;
     border-bottom: 1px dashed #64246d;
@@ -223,9 +223,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-#lite-form button {
-    width: 320px;
-    border-radius: 14px;
+#lite-form a {
+    width: 300px;
 }
 
 /*why-trust block*/

@@ -38,13 +38,6 @@ class PhotoController extends Controller
         $ph->url = base64_decode($p->url);
         $lastNumber = Photo::where('hairdresser_id', '=', $p->hairdresser_id)->count();
         $ph->order_number = $lastNumber;
-
-        if (isset($p->vk_owner_id)) {
-            $ph->vk_owner_id = $p->vk_owner_id;
-        }
-        if (isset($p->vk_photo_id)) {
-            $ph->vk_photo_id = $p->vk_photo_id;
-        }
         $ph->save();
         if ($lastNumber < 6) {
             $hc = new HairdresserController();
