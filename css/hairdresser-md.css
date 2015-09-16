@@ -40,6 +40,38 @@ body {
     cursor: default;
 }
 
+#page-title {
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: #ab3aab;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#64246d), to(#ab3aab));
+    background-image: -webkit-linear-gradient(top, #64246d 0, #ab3aab 100%);
+    background-image: -o-linear-gradient(top, #64246d 0, #ab3aab 100%);
+    background-image: linear-gradient(to bottom, #64246d 0, #ab3aab 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#64246d', endColorstr='#6F5499', GradientType=0);
+    background-repeat: repeat-x;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+#page-title h1 {
+    color: #ffffff;
+    width: auto;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+#page-title p {
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 20px;
+    color: #ffc8ff;
+}
+#page-title span {
+    white-space: nowrap;
+}
+
 /*
 .test-screen {
     position: fixed;
@@ -135,16 +167,16 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     left: 100px;
     top: 50px;
+    font-family: lobster, sans-serif;
 }
-
-h1 {
+#pink-circle p:first-child{
     line-height: 1.2;
     font-size: 36px;
     margin: 0 auto;
     width: 250px;
-}
 
-#pink-circle h2 {
+}
+#pink-circle p:nth-child(2) {
     font-size: 18px;
     margin-top: 40px;
 }
@@ -657,17 +689,20 @@ div.form-group {
         padding-top: 40px;
     }
 
-    h1 {
+    h1,#pink-circle p:first-child {
         line-height: 1.2;
         font-size: 26px;
         margin: 0 auto;
         width: 180px
     }
 
-    #pink-circle h2 {
+    #pink-circle p:nth-child(2) {
         font-size: 16px;
         margin: 10px auto;
         text-align: center;
+    }
+    #page-title p {
+        font-size: 14px;
     }
 
     #lite-form button {
@@ -865,15 +900,18 @@ div.form-group {
         padding-top: 50px;
     }
 
-    h1 {
+    h1,#pink-circle p:first-child {
         line-height: 1.2;
         font-size: 30px;
         width: 200px;
     }
 
-    #pink-circle h2 {
+    #pink-circle p:nth-child(2) {
         font-size: 18px;
         margin-top: 20px;
+    }
+    #page-title p {
+        font-size: 18px;
     }
 
     #header-logo-container {
