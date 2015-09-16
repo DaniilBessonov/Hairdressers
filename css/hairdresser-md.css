@@ -1,0 +1,998 @@
+.my-major-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffffff;
+}
+
+.my-major-link:hover {
+    color: #64246d;
+    text-decoration: none;
+    border-bottom: 1px solid #64246d;
+    cursor: pointer;
+}
+
+.my-minor-link {
+    color: #64246d;
+    text-decoration: none;
+    border-bottom: 1px dashed #64246d;
+}
+
+.my-minor-link:hover {
+    color: #ab3aab;
+    text-decoration: none;
+    border-bottom: 1px solid #ab3aab;
+    cursor: pointer;
+}
+
+.content-container {
+    width: 992px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+    position: relative;
+
+    /*    border-width: 1px;
+        border-color: #000000;
+        border-style: solid;*/
+}
+
+body {
+    cursor: default;
+}
+
+/*
+.test-screen {
+    position: fixed;
+    z-index: 1000;
+    text-shadow: 1px 1px 2px black;
+    font-size: 20px;
+}
+*/
+
+.btn-purple, .btn-pink {
+    color: #ffffff !important;
+    font-family: lobster, sans-serif;
+    font-size: 21px;
+    margin: 10px auto;
+    border-radius: 14px;
+}
+
+.btn-purple {
+    background-color: #64246d;
+}
+
+.btn-purple:hover {
+    background-color: #ab3aab;
+    color: #ffffff;
+}
+
+.btn-pink {
+    background-color: #ab3aab;
+}
+
+.btn-pink:hover {
+    background-color: #f58c95;
+    color: #ffffff;
+}
+
+#enroll-form-btn-block {
+    position: absolute;
+    right: 0;
+    color: #ffffff;
+}
+
+#enroll-form-btn-block > div {
+    position: relative;
+    text-align: center;
+}
+
+#enroll-form .btn-xl br {
+    display: none;
+}
+
+#up-button, #down-button {
+    opacity: 0;
+}
+
+#up-button > div {
+    font-size: 18px;
+    font-family: lobster, sans-serif;
+    margin: 12px;
+    cursor: pointer;
+}
+
+#down-button > div {
+    font-size: 18px;
+    font-family: lobster, sans-serif;
+    margin: 12px;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: lobster, sans-serif;
+}
+
+/*header-block block with girl*/
+
+#header-block {
+    background-image: url(../img/md/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4e8e7;
+    height: 532px;
+    position: relative;
+
+}
+
+#pink-circle {
+    border-radius: 50%;
+    width: 352px;
+    height: 352px;
+    background-color: rgba(245, 140, 149, 0.7);
+    padding-top: 80px;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    left: 100px;
+    top: 50px;
+}
+
+h1 {
+    line-height: 1.2;
+    font-size: 36px;
+    margin: 0 auto;
+    width: 250px;
+}
+
+#pink-circle h2 {
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+#header-logo-container {
+    position: absolute;
+    top: 20px;
+}
+
+#header-logo-container img {
+    width: 125px;
+    height: 91px;
+}
+
+.header-end-line {
+    background-position: 50% 50%;
+    background-repeat: repeat-x;
+    border-width: 1px;
+
+    background-image: url(../img/pattern_line.png);
+    border-color: #cccccc;
+    height: 6px;
+    width: 100%;
+    background-color: transparent;
+}
+
+/*lite form block*/
+#lite-form {
+    margin-top: 6px;
+}
+
+#lite-form p span {
+    font-family: lobster, sans-serif;
+}
+
+#lite-form .row > div {
+    /*padding: 0;*/
+}
+
+#lite-form p {
+    font-size: 26px;
+    margin-top: 18px;
+    color: #584e50;
+    text-align: center;
+}
+
+#lite-form button {
+    width: 320px;
+    border-radius: 14px;
+}
+
+/*why-trust block*/
+
+#trust-block {
+    background-color: #f58c95;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+#trust-block h2 {
+    font-size: 50px;
+    font-weight: 100;
+    margin: 30px 0;
+}
+
+#trust-block h2 + p {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.trust-item {
+    padding: 10px 0;
+}
+
+.trust-item h5 {
+    font-size: 26px;
+}
+
+.trust-item p {
+    font-size: 16px;
+}
+
+.trust-item-img {
+    border-width: 2px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 50%;
+    width: 91px;
+    height: 91px;
+}
+
+#trust-block .trust-item:nth-child(1) img {
+    zoom: 0.7;
+}
+
+#trust-block .trust-item:nth-child(2) img {
+    margin-top: 25px;
+}
+
+#trust-block .trust-item:nth-child(3) img {
+    margin-top: 15px;
+}
+
+/*our-hairdressers*/
+
+#our-hairdressers h2 {
+    color: #584e50;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#our-hairdressers h3 {
+    color: #584e50;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+}
+
+#hairdresser-container-more {
+    display: none;
+}
+
+.has-error input.form-control {
+    color: red;
+    box-shadow: inset 0 0 20px red;
+}
+
+.hairdresser {
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+    margin: 20px 0;
+}
+
+.hairdresser-photo button {
+    max-width: 270px;
+}
+
+.hairdresser-photo img {
+    display: block;
+    margin: 0 auto;
+    height: 360px;
+}
+
+.hairdresser-name {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+.hairdresser-name > div {
+    text-align: center;
+}
+
+.hairdresser-name span {
+    color: #ffffff;
+    text-shadow: rgb(0, 0, 0) 4px 2px 17px;
+    font-family: verdana, geneva, sans-serif;
+    font-size: 14px;
+}
+
+.hairdresser-name span:first-child {
+    font-size: 24px;
+    font-family: lobster, sans-serif;
+}
+
+.hairdresser-portfolio .row > div {
+    height: 122px;
+    min-width: 210px; /*180+30*/
+    overflow-y: hidden;
+    padding-top: 15px;
+}
+
+.hairdresser-portfolio img {
+    max-width: 180px;
+    cursor: pointer;
+}
+
+.gallery-close-btn {
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.gallery-close-btn:hover {
+    opacity: 1;
+}
+
+#galleryModal .modal-dialog > div:first-child {
+    z-index: 500;
+    position: absolute;
+    right: 0;
+}
+
+#galleryModal .modal-dialog > div:first-child > div {
+    right: -30px;
+    position: relative;
+}
+
+.hairdresser-prices {
+    margin-bottom: 20px;
+}
+
+.hairdresser-prices .page-header {
+    margin-top: 10px;
+}
+
+.hairdresser-prices h3 {
+    text-align: center;
+}
+
+.hairdresser-prices .row > div {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.hairdresser-prices p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.hairdresser-prices p > span {
+    font-family: lobster, sans-serif;
+}
+
+.button-more-h, .button-less-h {
+    position: relative;
+    width: 280px;
+    padding: 10px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    cursor: pointer;
+}
+
+.button-more-h {
+    top: -20px;
+    margin: 0 auto 10px auto;
+    border-bottom: 1px solid transparent;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+.button-more-h:hover {
+    top: -15px;
+}
+
+.button-less-h {
+    display: none;
+    top: -30px;
+    margin: 10px auto 0 auto;
+    border-top: 1px solid transparent;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+    background-color: #64246d;
+}
+
+.button-less-h:hover {
+    top: -35px;
+}
+
+#button-more-h-container {
+    margin-top: 50px;
+}
+
+#button-more-h-container p {
+    text-align: center;
+    margin: 0;
+}
+
+#button-more-h-container p span {
+    font-size: 21px;
+    color: #64246d;
+    font-family: 'Lobster', cursive;
+}
+
+#button-more-h-container .button-less-h p span {
+    color: #ffffff;
+}
+
+.hairdresser-prices {
+    display: none;
+}
+
+/*work process*/
+
+#work-process {
+    background-color: #64246d;
+    color: #ffffff;
+    padding-top: 0px;
+}
+
+#work-process .container-fluid {
+    margin-bottom: 30px;
+}
+
+#work-process h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.wp-circle {
+    width: 135px;
+    height: 135px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: #dc8499;
+    margin: 15px auto;
+    padding-top: 31px;
+}
+
+#work-process p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 -15px;
+}
+
+#work-process .ar {
+    margin-top: 60px;
+}
+
+#work-process .row {
+    margin-left: 4%;
+}
+
+#work-process .row > div {
+    padding: 0;
+}
+
+/*enroll form*/
+
+#enroll-form {
+    background-color: #f58c95;
+    background-image: url(../img/md/enroll-form.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 535px;
+
+}
+
+#slider-wrap {
+    height: 400px;
+    overflow: hidden;
+}
+
+#enroll-form h2, #enroll-form h3 {
+    text-align: center;
+    margin: 0;
+}
+
+#enroll-form h3 {
+    font-size: 26px;
+}
+
+#enroll-form h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+#enroll-form h2 + p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+#enroll-form input {
+    width: 420px;
+    height: 43px;
+    border-radius: 6px;
+}
+
+.btn-xl {
+    height: 70px;
+    width: 450px;
+    border-radius: 15px;
+    font-size: 26px;
+}
+
+#hair_length {
+    max-width: 500px;
+    /*opacity: 0;*/
+    display: none;
+}
+
+#price-block {
+    /*opacity: 0;*/
+    display: none;
+}
+
+#service-price {
+    color: #64246d;
+}
+
+#first-slide {
+    padding: 100px 0;
+}
+
+#second-slide {
+    padding-top: 35px;
+}
+
+#second-slide h3 {
+    margin: 10px 0;
+}
+
+#second-slide .container-fluid .col-xxs-12:first-child > div {
+    float: right;
+}
+
+div.form-group {
+    margin-bottom: 5px;
+}
+
+#footer {
+    background-color: #e1747d;
+    color: #ffffff;
+    padding: 10px 0;
+    margin-top: 1px;
+}
+
+#footer h4 {
+    font-size: 18px;
+    width: 230px;
+    margin-left: 20px;
+}
+
+#footer p {
+    font-size: 16px;
+}
+
+#footer p br {
+    display: none;
+}
+
+#loading_bar {
+    z-index: 1950;
+    position: fixed;
+    top: 0;
+    display: none;
+    background: #17181b url(../img/loader-send.gif) 50% 50% no-repeat;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.modal-dialog {
+    max-width: 370px;
+    margin: 10px auto;
+}
+
+.modal-body h4 {
+    text-align: center;
+    line-height: 1.5;
+    color: #584e50;
+}
+
+.modal-body p {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #64246d
+}
+
+@media (max-width: 500px) {
+    /*.test-screen:before {
+        content: 'xxs';
+    }*/
+    .col-xxs-3 {
+        width: 24.9%;
+    }
+
+    .col-xxs-4 {
+        width: 33.2%;
+    }
+
+    .col-xxs-6 {
+        width: 50%;
+    }
+
+    .col-xxs-12 {
+        width: 100%;
+    }
+
+    .hidden-xxs {
+        display: none !important;
+    }
+
+    .content-container {
+        width: 300px;
+        padding: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    #header-block {
+        background-image: url(../img/xs/header.jpg);
+        height: 268px;
+    }
+
+    #pink-circle {
+        left: 10px;
+        top: 30px;
+        width: 200px;
+        height: 200px;
+        padding-top: 40px;
+    }
+
+    h1 {
+        line-height: 1.2;
+        font-size: 26px;
+        margin: 0 auto;
+        width: 180px
+    }
+
+    #pink-circle h2 {
+        font-size: 16px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #lite-form button {
+        width: auto;
+    }
+
+    #trust-block .row .row > div {
+        padding-left: 0;
+    }
+
+    #trust-block {
+        padding: 0;
+    }
+
+    #trust-block h2 {
+        font-size: 36px;
+    }
+
+    #trust-block h2 + p {
+        font-size: 20px;
+    }
+
+    #trust-block h5 {
+        margin-top: 0;
+    }
+
+    .trust-item-img {
+        width: 66px;
+        height: 66px;
+    }
+
+    #trust-block .trust-item:nth-child(1) img {
+        zoom: 0.5;
+    }
+
+    #trust-block .trust-item:nth-child(2) img {
+        margin-top: 13px;
+    }
+
+    #trust-block .trust-item:nth-child(3) img {
+        margin-top: 7px;
+    }
+
+    .hairdresser-photo .hairdresser-name {
+        top: 40%;
+        margin-left: -5px;
+    }
+
+    .hairdresser-photo img {
+        height: 180px;
+        width: auto;
+    }
+
+    .hairdresser-portfolio-container, .hairdresser-photo {
+        padding-left: 0;
+    }
+
+    .hairdresser-portfolio .row > div {
+        padding: 5px;
+        min-width: 150px;
+        width: 150px;
+        height: 95px;
+    }
+
+    .hairdresser-portfolio img {
+        width: 140px;
+    }
+
+    #galleryModal .modal-dialog > div:first-child > div {
+        right: 0;
+        position: relative;
+    }
+
+    #our-hairdressers .hairdresser-prices h3 {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    #our-hairdressers .hairdresser-prices img {
+        zoom: 0.7;
+    }
+
+    #our-hairdressers .hairdresser-prices p {
+        min-height: 72px;
+    }
+
+    #our-hairdressers .hairdresser-prices .row > div:nth-child(8) p {
+        margin-top: -23px;
+    }
+
+    .hairdresser-prices {
+        margin-left: -15px;
+    }
+
+    #work-process h2 {
+        font-size: 36px;
+    }
+
+    #work-process p {
+        font-size: 14px;
+    }
+
+    .wp-circle {
+        width: 90px;
+        height: 90px;
+        padding-top: 10px;
+    }
+
+    #work-process .ar {
+        zoom: 0.7;
+        margin-top: 70px;
+    }
+
+    #enroll-form {
+        background-image: url(../img/xxs/enroll-form.jpg);
+        background-repeat: repeat;
+        height: auto;
+    }
+
+    #enroll-form input {
+        width: 290px;
+    }
+
+    #enroll-form .btn-xl {
+        width: 280px;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    #enroll-form .btn-xl br {
+        display: block;
+    }
+
+    #slider-wrap {
+        height: auto;
+    }
+
+    #second-slide .container-fluid .col-xxs-12:first-child > div {
+        float: left;
+    }
+
+    #second-slide .checkbox {
+        padding: 6px 0;
+    }
+
+    #second-slide .checkbox label span {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    #first-slide {
+        padding: 20px 0;
+    }
+
+    #second-slide {
+        padding-top: 0;
+        display: none;
+    }
+
+    #footer p br {
+        display: block;
+    }
+
+    #footer a img {
+        zoom: 0.65;
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+
+    #footer h4 {
+        margin-left: 0;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    /* .test-screen:before {
+         content: 'xs';
+     }
+ */
+    body {
+        padding: 0;
+    }
+
+    #header-block {
+        background-image: url(../img/xs/header.jpg);
+        height: 268px;
+    }
+
+    #pink-circle {
+        left: 10px;
+        top: 10px;
+        width: 250px;
+        height: 250px;
+        padding-top: 50px;
+    }
+
+    h1 {
+        line-height: 1.2;
+        font-size: 30px;
+        width: 200px;
+    }
+
+    #pink-circle h2 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    #header-logo-container {
+        top: 0;
+    }
+
+    #header-logo-container img {
+        content: url("../img/sm/logo.png");
+        width: 80px;
+        height: 58px;
+    }
+
+    .content-container {
+        width: 500px;
+    }
+
+    div#trust-block {
+        padding: 0;
+    }
+
+    .hairdresser-photo img {
+        height: 288px;
+        width: auto;
+    }
+
+    .hairdresser-photo .hairdresser-name {
+        top: 55%;
+        margin-left: -15px;
+    }
+
+    div.hairdresser-prices .page-header {
+        margin-top: 30px;
+    }
+
+    .wp-circle {
+        width: 100px;
+        height: 100px;
+        padding-top: 16px;
+    }
+
+    #work-process .ar {
+        margin-top: 45px;
+    }
+
+    #our-hairdressers .content-container {
+        padding-left: 0;
+    }
+
+    #our-hairdressers .hairdresser-prices p {
+        min-height: 72px;
+    }
+
+    #second-slide .checkbox {
+        padding: 3px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* .test-screen:before {
+         content: 'sm';
+     }*/
+    #header-block {
+        background-image: url(../img/sm/header.jpg);
+        height: 412px;
+    }
+
+    #pink-circle {
+        left: 20px;
+        top: 30px;
+    }
+
+    #header-logo-container img {
+        content: url("../img/sm/logo.png");
+        width: 80px;
+        height: 58px;
+    }
+
+    .content-container {
+        width: 768px;
+    }
+
+    .hairdresser-portfolio-container, .hairdresser-portfolio .row > div {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hairdresser-photo {
+        max-width: 300px; /*270 +30*/
+    }
+
+    .wp-circle {
+        width: 100px;
+        height: 100px;
+        padding-top: 16px;
+    }
+
+    #work-process .ar {
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    /*  .test-screen:before {
+          content: 'md,lg';
+      }*/
+    .content-container {
+        width: 992px;
+    }
+
+    .hairdresser-prices {
+        margin-top: -120px;
+    }
+
+    .hairdresser-photo {
+        max-width: 300px; /*270 +30*/
+    }
+
+    #lite-form p br {
+        display: none;
+    }
+
+}
