@@ -9,4 +9,5 @@ Disallow: /engine/
 Disallow: form.html
 Disallow: payment-form.html
 Disallow: payment-success.html
+Disallow: base.html
 Disallow: 404.html
