@@ -2,6 +2,7 @@
     color: #FFFFFF;
     text-decoration: none;
     border-bottom: 1px dashed #ffffff;
+    white-space: nowrap;
 }
 
 .my-major-link:hover {
@@ -9,12 +10,14 @@
     text-decoration: none;
     border-bottom: 1px solid #64246d;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .my-minor-link, .my-minor-link:visited, .my-minor-link:active, .my-minor-link:focus {
     color: #64246d;
     text-decoration: none;
     border-bottom: 1px dashed #64246d;
+    white-space: nowrap;
 }
 
 .my-minor-link:hover {
@@ -22,6 +25,7 @@
     text-decoration: none;
     border-bottom: 1px solid #ab3aab;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .content-container {
@@ -216,26 +220,28 @@ h1, h2, h3, h4 {
 /*lite form block*/
 #lite-form {
     margin-top: 6px;
+    color: #584e50;
 }
 
-#lite-form p span {
+#lite-form p span, #to-strizhki-2016 p span {
     font-family: lobster, sans-serif;
 }
 
-#lite-form .row > div {
-    /*padding: 0;*/
-}
-
-#lite-form p {
+#lite-form p, #to-strizhki-2016 p {
     font-size: 26px;
     margin-top: 18px;
-    color: #584e50;
+
     text-align: center;
 }
 
 #lite-form a {
     width: 300px;
 }
+#to-strizhki-2016 {
+    background-color: #64246d;
+    color: #ffffff;
+}
+
 
 /*why-trust block*/
 
