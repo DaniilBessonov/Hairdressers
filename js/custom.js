@@ -364,7 +364,7 @@ function getHairdresserHTMLTemplate() {
 function addHairdressersToContainer(hs, cont) {
     var adding = $.Deferred();
     var template = getHairdresserHTMLTemplate();
-    //cont.children().remove();
+    cont.children().remove();
     $.each(hs, function (i, h) {
         var html = convertJsToHTML(h, template);
         html = convertStrToHTML('screenSize', getScreenSize() == 'sm' ? 'md' : getScreenSize(), html);
