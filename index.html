@@ -160,7 +160,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8"><p>Не знаете какую <span>прическу</span> сделать?</p></div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <a class="btn btn-pink btn-lg center-block" href="strizhki-2016.html" style="max-width: 300px;">Модные стрижки в 2016</a>
+                <a class="btn btn-pink btn-lg center-block" href="strizhki-2016.html" onclick="yaCounter30665247.reachGoal('GOTO_STRIZHKI2016');" style="max-width: 300px;">Модные стрижки в 2016</a>
             </div>
         </div>
     </div>
@@ -505,7 +505,11 @@
             if (checkClientName(name)) {
                 name_box.parent().removeClass("has-error").addClass("has-success");
                 showSecondSlide();
+                try{
                 yaCounter30665247.reachGoal('SET_CLIENT_NAME');
+                } catch (e) {
+                    console.error('Yandex metrika was blocked. SET_CLIENT_NAME event happened.');
+                }
             } else {
                 name_box.parent().addClass("has-error").removeClass("has-success");
 
@@ -517,14 +521,22 @@
             completed: function () {
                 phone_box.parent().addClass("has-success");
                 showSecondSlide();
+                try{
                 yaCounter30665247.reachGoal('SET_CLIENT_PHONE');
+                } catch (e) {
+                    console.error('Yandex metrika was blocked. SET_CLIENT_PHONE event happened.');
+                }
             }
         });
 
         $('input.my-checkbox').on('click', function () {
             //showHairLength();
+            try{
             yaCounter30665247.reachGoal('SET_SERVICE');
             yaCounter30665247.reachGoal('SET_HAIR_LENGTH');
+            } catch (e) {
+                console.error('Yandex metrika was blocked. SET_SERVICE, SET_HAIR_LENGTH event happened.');
+            }
         });
 
         initGallery($('.hairdresser-portfolio'));
