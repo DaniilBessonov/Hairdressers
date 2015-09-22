@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <title>CRM</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -81,7 +81,22 @@
 
 <div class="page-header">
     <h1><span>CRM</span> Парикмахер на дом
-        <small>Нижний Новгород</small>
+
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                <?php echo \App\Utils::getCityNameById($city_id);?>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="bookings.95">Нижний Новгород</a>
+                </li>
+                <li><a href="bookings.49"
+                       onclick="bookingEngine.onlyActiveByCity(bookingCallback);$('h2 button').html('Только активные <span class=caret></span>');">Екатеринбург</a></li>
+                <li><a href="bookings.42"
+                       onclick="bookingEngine.onlyNotActiveByCity(bookingCallback);$('h2 button').html('Только не активные <span class=caret></span>');">Воронеж</a></li>
+            </ul>
+        </div>
     </h1>
 </div>
 
@@ -110,10 +125,12 @@
     </h2>
 </div>
 <p>
-    <a class="btn btn-default" href="hairdressers" role="button">База парикмахеров</a>
+    <a class="btn btn-default" href="hairdressers.<?php echo $city_id; ?>" role="button">База парикмахеров</a>
     <a class="btn btn-default" href="home" role="button">В Личный кабинет</a>
 </p>
 </div>
+
+
 
 <div class="table-responsive">
 <table class="table table-bordered table-striped table-hover">
@@ -203,14 +220,14 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="js/engine.js"></script>
 <script src="js/bootstrap-datepicker.min.js"></script>
 <script src="js/bootstrap-datepicker.ru.min.js"></script>
 
 <script>
 
-    var bookingEngine = new Booking(95);
+    var bookingEngine = new Booking(<?php echo $city_id; ?>);
     bookingEngine.onlyActiveByCity(bookingCallback);
 
     function bookingCallback(bookings) {

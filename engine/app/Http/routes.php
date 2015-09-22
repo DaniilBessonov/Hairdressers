@@ -20,12 +20,20 @@ Route::any('/auth/register', function(){
 
 //Route::get('home', 'HomeController@index');
 
-Route::get('bookings', ['middleware' => 'auth',  function(){
+
+Route::get('bookings.{city_id?}', ['middleware' => 'auth', function ($city_id = 95) {
+    return view('bookings', ['city_id' => $city_id]);
+}])->where('city_id', '[0-9]+');
+/*Route::get('bookings', ['middleware' => 'auth', function () {
     return view('bookings');
-}]);
-Route::get('hairdressers', ['middleware' => 'auth',  function(){
+}]);*/
+
+Route::get('hairdressers.{city_id?}', ['middleware' => 'auth',  function($city_id = 95){
+    return view('hairdressers', ['city_id' => $city_id]);
+}])->where('city_id', '[0-9]+');
+/*Route::get('hairdressers', ['middleware' => 'auth',  function(){
     return view('hairdressers');
-}]);
+}]);*/
 
 Route::get('test-mode', ['middleware' => 'auth', function(){
     return view('test-mode');

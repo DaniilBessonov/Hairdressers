@@ -3,7 +3,8 @@
 namespace App;
 
 
-class Utils {
+class Utils
+{
     public static function convertToTranslite($string)
     {
         $converter = array(
@@ -34,7 +35,6 @@ class Utils {
         return strtr($string, $converter);
     }
 
-
     public static function checkInBlackList($phone)
     {
         $blackList = array();
@@ -44,5 +44,11 @@ class Utils {
             if ($phone == $blPhone) return true;
         }
         return false;
+    }
+
+    public static function getCityNameById($id)
+    {
+        $cities = [95 => 'Нижний Новгород', 49 => 'Екатеринбург',42 => 'Воронеж'];
+        return $cities[$id];
     }
 }
