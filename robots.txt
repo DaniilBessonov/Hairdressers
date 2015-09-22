@@ -1,6 +1,6 @@
 User-agent: *
 Crawl-delay: 5
-Sitemap: http://parikmaher-na-dom.hol.es/sitemap.xml
+Sitemap: http://parikmaher-na-dom.org/sitemap.xml
 Disallow: /js/
 Disallow: /css/
 Disallow: /fonts/

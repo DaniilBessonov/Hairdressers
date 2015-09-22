@@ -5,14 +5,16 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
-				<div class="panel-heading">Home</div>
+				<div class="panel-heading">Главное меню</div>
 
 				<div class="panel-body">
-					<p>You are logged in!</p>
+					<p>Вы успешно авторизовались!</p>
 
-                    <p>Go to Sales Force Automation system</p>
-                    <a href="bookings" class="btn btn-primary">Go!</a>
-                    <a href="/engine/public/auth/logout" class="btn btn-danger" style="float: right">Logout</a>
+                    <p>Выберите город</p>
+                    <a href="bookings.95" class="btn btn-primary">Нижний Новгород</a>
+                    <a href="bookings.49" class="btn btn-primary">Екатеринбург</a>
+                    <a href="bookings.42" class="btn btn-primary">Воронеж</a>
+                    <a href="/engine/public/auth/logout" class="btn btn-danger" style="float: right">Выход</a>
 				</div>
 			</div>
 		</div>

@@ -28,10 +28,9 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-    
 	public function index()
 	{
-		return view('bookings');
+		return view('home');
 	}
 
 }
