@@ -37,7 +37,11 @@ function initGallery(cont) {
             $('#galleryModal .gallery-container').html('');
             $('.active-gallery').removeClass('active-gallery');
         });
-        yaCounter30665247.reachGoal('OPEN_PORTFOLIO');
+        try{
+            yaCounter30665247.reachGoal('OPEN_PORTFOLIO');
+        } catch (e) {
+            console.error('Yandex metrika was blocked. OPEN_PORTFOLIO event happened.');
+        }
     });
 }
 
@@ -53,7 +57,11 @@ $(document).on('click', 'a.controls', function () {
     $('a.previous').attr('href', index - 1);
 
     manageButtons(index, h_id);
-    yaCounter30665247.reachGoal('NEXT_PHOTO');
+    try{
+        yaCounter30665247.reachGoal('NEXT_PHOTO');
+    } catch (e) {
+        console.error('Yandex metrika was blocked. NEXT_PHOTO event happened.');
+    }
     return false;
 });
 

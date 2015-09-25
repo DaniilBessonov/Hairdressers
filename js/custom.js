@@ -9,7 +9,11 @@ function showMoreHaird() {
      addHairdressersToContainer(hs, contMore)
      }
      */
-    yaCounter30665247.reachGoal('MORE_HAIRDRESSERS');
+    try {
+        yaCounter30665247.reachGoal('MORE_HAIRDRESSERS');
+    } catch (e) {
+        console.error('Yandex metrika was blocked. MORE_HAIRDRESSERS event happened.');
+    }
 }
 
 function showLessHaird() {
@@ -69,14 +73,22 @@ function showSecondSlide() {
 function showHairLength() {
     if (checkCheckBoxes()) {
         $("#hair_length").animate({opacity: 1});
-        yaCounter30665247.reachGoal('SET_SERVICE');
+        try {
+            yaCounter30665247.reachGoal('SET_SERVICE');
+        } catch (e) {
+            console.error('Yandex metrika was blocked. SET_SERVICE event happened.');
+        }
     } else {
         $("#hair_length").animate({opacity: 0});
     }
 
     if (checkRadioBoxes()) {
         $("#price-block").animate({opacity: 1});
-        yaCounter30665247.reachGoal('SET_HAIR_LENGTH');
+        try {
+            yaCounter30665247.reachGoal('SET_HAIR_LENGTH');
+        } catch (e) {
+            console.error('Yandex metrika was blocked. SET_HAIR_LENGTH event happened.');
+        }
     } else {
         $("#price-block").animate({opacity: 0});
     }
@@ -117,7 +129,11 @@ function init() {
         if (checkClientName(name)) {
             name_box.parent().removeClass("has-error").addClass("has-success");
             showSecondSlide();
-            yaCounter30665247.reachGoal('SET_CLIENT_NAME');
+            try {
+                yaCounter30665247.reachGoal('SET_CLIENT_NAME');
+            } catch (e) {
+                console.error('Yandex metrika was blocked. SET_CLIENT_NAME event happened.');
+            }
         } else {
             name_box.parent().addClass("has-error").removeClass("has-success");
 
@@ -129,14 +145,22 @@ function init() {
         completed: function () {
             phone_box.parent().addClass("has-success");
             showSecondSlide();
-            yaCounter30665247.reachGoal('SET_CLIENT_PHONE');
+            try {
+                yaCounter30665247.reachGoal('SET_CLIENT_PHONE');
+            } catch (e) {
+                console.error('Yandex metrika was blocked. SET_CLIENT_PHONE event happened.');
+            }
         }
     });
 
     $('input.my-checkbox').on('click', function () {
         //showHairLength();
-        yaCounter30665247.reachGoal('SET_SERVICE');
-        yaCounter30665247.reachGoal('SET_HAIR_LENGTH');
+        try {
+            yaCounter30665247.reachGoal('SET_SERVICE');
+            yaCounter30665247.reachGoal('SET_HAIR_LENGTH');
+        } catch (e) {
+            console.error('Yandex metrika was blocked. SET_SERVICE, SET_HAIR_LENGTH event happened.');
+        }
     });
 
     initGallery($('.hairdresser-portfolio'));
@@ -179,11 +203,19 @@ function finishEnroll() {
                 if (response.validation_error) {
                     console.error(response.validation_error.msg);
                     $('#failOrderModal').modal('show');
-                    yaCounter30665247.reachGoal('FAIL_ENROLL');
+                    try {
+                        yaCounter30665247.reachGoal('FAIL_ENROLL');
+                    } catch (e) {
+                        console.error('Yandex metrika was blocked. FAIL_ENROLL event happened.');
+                    }
                 } else {
                     if (response == "success") {
                         $('#successOrderModal').modal('show');
-                        yaCounter30665247.reachGoal('SUCCESS_ENROLL');
+                        try {
+                            yaCounter30665247.reachGoal('SUCCESS_ENROLL');
+                        } catch (e) {
+                            console.error('Yandex metrika was blocked. SUCCESS_ENROLL event happened.');
+                        }
                     } else {
                         //TODO add ya counter for black list!
                     }
@@ -225,7 +257,11 @@ function increaseYaCounter(ord) {
         exchange_rate: 1,
         goods: g
     };
-    yaCounter30665247.reachGoal('CLICK_ENROLL', yaParams);
+    try {
+        yaCounter30665247.reachGoal('CLICK_ENROLL', yaParams);
+    } catch (e) {
+        console.error('Yandex metrika was blocked. CLICK_ENROLL event happened.');
+    }
 }
 
 function findHairdresserIdForOrder(ord) {
@@ -275,14 +311,22 @@ function makeOrderAPI(ord) {
                 if (response.validation_error) {
                     console.error(response.validation_error.msg);
                     $('#failOrderModal').modal('show');
-                    yaCounter30665247.reachGoal('FAIL_ENROLL');
+                    try {
+                        yaCounter30665247.reachGoal('FAIL_ENROLL');
+                    } catch (e) {
+                        console.error('Yandex metrika was blocked. FAIL_ENROLL event happened.');
+                    }
                 } else {
                     if (response.emailNotification) {
                         $('#successOrderModal').modal('show');
                     } else {
                         $('#failOrderModal').modal('show');
                     }
-                    yaCounter30665247.reachGoal('SUCCESS_ENROLL');
+                    try {
+                        yaCounter30665247.reachGoal('SUCCESS_ENROLL');
+                    } catch (e) {
+                        console.error('Yandex metrika was blocked. SUCCESS_ENROLL event happened.');
+                    }
                 }
             } else {
                 console.error('JSON invalid');
@@ -315,7 +359,11 @@ function togglePrice(el) {
         pr.slideUp();
         $(el).html('Посмотреть цены');
     }
-    yaCounter30665247.reachGoal('TOGGLE_PRICE');
+    try {
+        yaCounter30665247.reachGoal('TOGGLE_PRICE');
+    } catch (e) {
+        console.error('Yandex metrika was blocked. TOGGLE_PRICE event happened.');
+    }
 }
 
 function enroll(id) {
@@ -324,14 +372,22 @@ function enroll(id) {
     $('#order-master-name').html($("#" + id + " h3 span").html());
     disablePriceCheckBoxes(id);
     scrollToElementWithId('#enroll-form');
-    yaCounter30665247.reachGoal('ENROLL_GO_TO_FORM');
+    try {
+        yaCounter30665247.reachGoal('ENROLL_GO_TO_FORM');
+    } catch (e) {
+        console.error('Yandex metrika was blocked. ENROLL_GO_TO_FORM event happened.');
+    }
 }
 
 function enrollFromGallery() {
     var id = $('.active-gallery').parents('.hairdresser').attr("id");
     $('#galleryModal').modal('toggle');
     enroll(id);
-    yaCounter30665247.reachGoal('ENROLL_FROM_GALLERY');
+    try {
+        yaCounter30665247.reachGoal('ENROLL_FROM_GALLERY');
+    } catch (e) {
+        console.error('Yandex metrika was blocked. ENROLL_FROM_GALLERY event happened.');
+    }
 }
 
 function convertJsToHTML(obj, str) {
@@ -387,7 +443,7 @@ function addHairdressersToContainer(hs, cont) {
                 }
             });
         } catch (e) {
-            console.error('Check photo_xs for hairdresser with id='+h.id,e);
+            console.error('Check photo_xs for hairdresser with id=' + h.id, e);
         }
         cont.append(block);
         if (hs.length - 1 == i) { //last element add

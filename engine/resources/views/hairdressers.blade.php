@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <title>Base</title>
-    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic,latin" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -111,7 +111,18 @@
 
 <div class="page-header">
     <h1><span>Base</span> Парикмахер на дом
-        <small>Нижний Новгород</small>
+        <div class="dropdown">
+            <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                <?php echo \App\Utils::getCityNameById($city_id);?>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="hairdressers.95">Нижний Новгород</a></li>
+                <li><a href="hairdressers.49">Екатеринбург</a></li>
+                <li><a href="hairdressers.42">Воронеж</a></li>
+            </ul>
+        </div>
     </h1>
 </div>
 
@@ -138,7 +149,7 @@
     </h2>
 </div>
 <p>
-    <a class="btn btn-default" href="bookings" role="button">Посмотреть заказы</a>
+    <a class="btn btn-default" href="bookings.<?php echo $city_id; ?>" role="button">Посмотреть заказы</a>
     <a class="btn btn-default" href="home" role="button">В Личный кабинет</a>
     <a class="btn btn-default" href="test-mode" role="button" target="_blank">Demo-страница</a>
     <button type="button" class="btn btn-primary" onclick="newHairdresser()">Добавить нового парикмахера</button>
@@ -257,15 +268,15 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="js/engine.js"></script>
 <script src="js/bootstrap-datepicker.min.js"></script>
 <script src="js/bootstrap-datepicker.ru.min.js"></script>
 <script src="js/draggable.js"></script>
 
 <script>
-    var photoEngine = new Photo(95);
-    var hairdresserEngine = new Hairdresser(95);
+    var photoEngine = new Photo(<?php echo $city_id; ?>);
+    var hairdresserEngine = new Hairdresser(<?php echo $city_id; ?>);
     hairdresserEngine.allByCity(hairdressersCallback);
 
     function hairdressersCallback(hairdressers) {
