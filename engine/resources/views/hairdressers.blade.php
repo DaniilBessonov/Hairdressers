@@ -151,7 +151,7 @@
 <p>
     <a class="btn btn-default" href="bookings.<?php echo $city_id; ?>" role="button">Посмотреть заказы</a>
     <a class="btn btn-default" href="home" role="button">В Личный кабинет</a>
-    <a class="btn btn-default" href="test-mode" role="button" target="_blank">Demo-страница</a>
+    <a class="btn btn-default" href="test-mode.<?php echo $city_id; ?>" role="button" target="_blank">Demo-страница</a>
     <button type="button" class="btn btn-primary" onclick="newHairdresser()">Добавить нового парикмахера</button>
 </p>
 </div>

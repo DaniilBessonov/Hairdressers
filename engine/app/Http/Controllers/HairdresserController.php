@@ -47,11 +47,12 @@ class HairdresserController extends Controller
         return Hairdresser::find($id);
     }
 
-    public function anyCreate()
+    public function anyCreate($city)
     {
         $h = new Hairdresser();
         $h->surname = 'Новый';
         $h->name = 'парикмахер';
+        $h->city_id = $city;
         $h->photos_xs = '/img/xxs/avatar/obj.id_xxxs.jpg<br>/img/xxs/avatar/obj.id_xxxs.jpg<br>/img/xxs/avatar/obj.id_xxxs.jpg<br>/img/xxs/avatar/obj.id_xxxs.jpg<br>/img/xxs/avatar/obj.id_xxxs.jpg<br>/img/xxs/avatar/obj.id_xxxs.jpg';
         $h->save();
         return $h;

@@ -13,5 +13,48 @@
         <priority>1.000000</priority>
 
     </url>
+    <url>
 
+        <loc>http://parikmaher-na-dom.org/strizhki-2016.html</loc>
+
+        <lastmod>2015-10-04</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.000000</priority>
+
+    </url>
+    <url>
+
+        <loc>http://parikmaher-na-dom.org/nizhniy-novgorod/</loc>
+
+        <lastmod>2015-10-04</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.000000</priority>
+
+    </url>
+    <url>
+
+        <loc>http://parikmaher-na-dom.org/ekaterinburg/</loc>
+
+        <lastmod>2015-10-04</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.000000</priority>
+
+    </url>
+    <url>
+
+        <loc>http://parikmaher-na-dom.org/voronezh/</loc>
+
+        <lastmod>2015-10-04</lastmod>
+
+        <changefreq>weekly</changefreq>
+
+        <priority>1.000000</priority>
+
+    </url>
 </urlset>

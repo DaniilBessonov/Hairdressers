@@ -21,7 +21,7 @@ LiteEngine.prototype.photoLoad = null;
 LiteEngine.prototype.systemCall = function (method, params, callback) {
     console.log("[" + method + "]", params);
     var url = (params != undefined) ? method + '/' + JSON.stringify(params) : method;
-    url = 'engine/public/' + url;
+    url = '/engine/public/' + url;
     //console.debug(url);
     $.get(url, undefined,
         function (response) {

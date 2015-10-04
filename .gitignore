@@ -49,3 +49,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .idea/*
+*.log
+engine/storage/framework/sessions/*
