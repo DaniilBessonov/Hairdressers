@@ -35,9 +35,9 @@ Route::get('hairdressers.{city_id?}', ['middleware' => 'auth',  function($city_i
     return view('hairdressers');
 }]);*/
 
-Route::get('test-mode', ['middleware' => 'auth', function(){
-    return view('test-mode');
-}]);
+Route::get('test-mode.{city_id?}', ['middleware' => 'auth', function($city_id = 95){
+    return view('test-mode', ['city_id' => $city_id]);
+}])->where('city_id', '[0-9]+');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

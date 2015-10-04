@@ -111,7 +111,7 @@ Hairdresser.prototype.get = function (id, callBack) {
     this.systemCall('hairdresser/get', id, callBack);
 };
 Hairdresser.prototype.create = function (callBack) {
-    this.systemCall('hairdresser/create', undefined, callBack);
+    this.systemCall('hairdresser/create', this.city_id, callBack);
 };
 Hairdresser.prototype.update = function (id, type, content, callBack) {
     var p = {id: id, type: type, content: content};
