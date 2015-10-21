@@ -33,6 +33,7 @@ LiteEngine.prototype.systemCall = function (method, params, callback) {
             $('#loading_bar').hide();
             $('#failOrderModal').modal('show');
             console.error("AJAX connection error");
+            yaCounter30665247.reachGoal('LOADING_FAIL');
         });
 };
 LiteEngine.prototype.crossDomainCall = function (url) {
