@@ -32,7 +32,8 @@ class BookingController extends Controller
             $hn = $this->smsForHairdresser($ord, $h);
             $this->smsForAdministrator($ord, $h, $hn);
             $this->emailNotification($ord, $h, $hn, "dabessonov@yandex.ru");
-            //$this->emailNotification($ord, $h, $hn, "archi-doma2@yandex.ru");
+            $this->emailNotification($ord, $h, $hn, "archi-doma2@yandex.ru");
+            $this->emailNotification($ord, $h, $hn, "avdeeva.a.v.90@gmail.com");
             $this->addInCRM($json, $h->id);
             return json_encode('success');
         } catch (ValidateException $e) {
