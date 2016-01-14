@@ -1,0 +1,4 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteEngine On
+RewriteCond %{HTTP_HOST} www.parikmaher-na-dom.org [NC]
+RewriteRule (.*) http://parikmaher-na-dom.org/$1 [R=301,L]
